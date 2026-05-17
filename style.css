@@ -1,0 +1,74 @@
+* {
+.hero-content p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.section-inner {
+  width: min(1100px, 90%);
+  margin: auto;
+  padding: 6rem 0;
+}
+
+.narrow {
+  max-width: 700px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.music-section {
+  background: #121212;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.caption {
+  opacity: 0.6;
+  font-size: 0.95rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+.journal-entry {
+  margin-bottom: 2rem;
+}
+
+.journal-entry p {
+  line-height: 1.9;
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  opacity: 0.4;
+  font-size: 0.9rem;
+}
