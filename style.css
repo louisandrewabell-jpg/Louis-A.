@@ -65,9 +65,20 @@ h1, h2 {
 /* Image sizing (THIS fixes your “way too big” issue) */
 .gallery-item img {
   width: 100%;
+  max-width: 220px;   /* controls image size */
   height: auto;
+
   display: block;
-  border-radius: 6px;
+  margin: 0 auto;
+
+  border-radius: 4px;
+
+  filter: contrast(0.95) brightness(0.9);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
 
   /* subtle gallery feel */
   filter: contrast(0.95) brightness(0.9);
