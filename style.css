@@ -91,6 +91,12 @@ h1, h2 {
   filter: contrast(1) brightness(1);
 }
 
+/* Show images when they come into view */
+.gallery-item img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
