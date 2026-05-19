@@ -62,6 +62,10 @@ h1, h2 {
   margin-top: 20px;
 }
 
+.gallery-item a {
+  display: block;
+}
+
 /* Image sizing (THIS fixes your “way too big” issue) */
 .gallery-item img {
   width: 100%;
@@ -78,12 +82,7 @@ h1, h2 {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 1.2s ease, transform 1.2s ease;
-}
-
-  /* subtle gallery feel */
-  filter: contrast(0.95) brightness(0.9);
-
-  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
 }
 
 /* Hover effect (optional but nice) */
@@ -91,6 +90,67 @@ h1, h2 {
   transform: scale(1.03);
   filter: contrast(1) brightness(1);
 }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  padding: 30px;
+}
+
+.lightbox.visible {
+  display: flex;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f2eadf;
+  font-size: 28px;
+  line-height: 1;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+}
+
+.lightbox-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 /* Paragraph / caption text */
 p {
