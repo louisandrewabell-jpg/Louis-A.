@@ -53,6 +53,30 @@ h1, h2 {
   display: block;
 }
 
+/* Music links styling */
+.music-links {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.music-links a {
+  color: #f2eadf;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px solid rgba(242, 234, 223, 0.3);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.music-links a:hover {
+  background-color: rgba(242, 234, 223, 0.1);
+  border-color: rgba(242, 234, 223, 0.6);
+  opacity: 1;
+}
+
 /* Image sizing (THIS fixes your “way too big” issue) */
 .gallery-item img {
   width: 100%;
